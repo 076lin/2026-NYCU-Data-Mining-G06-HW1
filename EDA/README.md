@@ -45,3 +45,10 @@ python interaction_tests_fixed.py --csv Sleep_Efficiency_train_v2.csv --output-d
 
 Notebook 的所有分析格可在 Jupyter 依序執行；若沒有 eda-local 核心，選擇安裝上述套件的 Python 核心。
 這些統計結果描述觀察資料中的關聯，不代表因果；原程式以未校正 p < 0.05 選圖，請同時參考 FDR 欄位。
+
+
+## 資料來源與版權
+
+本分析使用 Kaggle 上由 Equilibriumm 發布的 [Sleep Efficiency Dataset](https://www.kaggle.com/datasets/equilibriumm/sleep-efficiency)。本目錄的 `Sleep_Efficiency_train_v2.csv` 是該資料的 316 筆訓練子集，權利仍屬原權利人。
+
+2026-10-18 查核 Kaggle 官方 License 欄位，標示為 **Data files © Original Authors**，未提供明確的標準開放授權條款。保留來源不等於取得 CSV 公開再散布許可；詳見根目錄 [DATA_LICENSE.md](../DATA_LICENSE.md)。

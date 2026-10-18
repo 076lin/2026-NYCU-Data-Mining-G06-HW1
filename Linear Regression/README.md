@@ -1,6 +1,6 @@
 # Predicting Nightly Sleep Efficiency with Linear Regression
 
-NYCU Data Mining 2026 — HW1 · Team `<TeamID>`
+NYCU Data Mining 2026 — HW1 · Group 06
 
 <!-- TODO: fill in team members -->
 | Name | Student ID |
@@ -81,4 +81,4 @@ All numbers above are produced by the notebook with seed `20261010`.
 
 `Sleep_Efficiency.csv` is the Kaggle *Sleep Efficiency* dataset: <https://www.kaggle.com/datasets/equilibriumm/sleep-efficiency>.
 It contains 452 rows and 15 columns; four columns have missing values (Awakenings 20, Caffeine 25, Alcohol 14, Exercise 6).
-<!-- TODO: check the license shown on the Kaggle page and state it here; if it does not allow redistribution, remove the CSV and keep only the download link. -->
+Kaggle’s official License field states **Data files © Original Authors** (checked 2026-10-18). The page does not provide explicit standard open-license terms or a clear grant to redistribute the CSV. Credit and this notice alone do not establish redistribution permission; confirm permission or another applicable basis before publishing bundled data. See [DATA_LICENSE.md](../DATA_LICENSE.md) for provenance, covered files, and rights limitations. The dataset is not relicensed by this project.
