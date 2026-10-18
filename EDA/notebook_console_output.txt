@@ -1,0 +1,283 @@
+CELL 4
+Input: Sleep_Efficiency_train_v2.csv | Rows: 316 | Columns: 15
+
+
+CELL 4
+   ID  Age  Gender              Bedtime          Wakeup time  Sleep duration  \
+0   1   65  Female  2021-03-06 01:00:00  2021-03-06 07:00:00             6.0   
+1   3   40  Female  2021-05-25 21:30:00  2021-05-25 05:30:00             8.0   
+2   4   40  Female  2021-11-03 02:30:00  2021-11-03 08:30:00             6.0   
+3   6   36  Female  2021-07-01 21:00:00  2021-07-01 04:30:00             7.5   
+4   7   27  Female  2021-07-21 21:00:00  2021-07-21 03:00:00             6.0   
+
+   Sleep efficiency  REM sleep percentage  Deep sleep percentage  \
+0              0.88                    18                     70   
+1              0.89                    20                     70   
+2              0.51                    23                     25   
+3              0.90                    23                     60   
+4              0.54                    28                     25   
+
+   Light sleep percentage  Awakenings  Caffeine consumption  \
+0                      12         0.0                   0.0   
+1                      10         1.0                   0.0   
+2                      52         3.0                  50.0   
+3                      17         0.0                   NaN   
+4                      47         2.0                  50.0   
+
+   Alcohol consumption Smoking status  Exercise frequency  
+0                  0.0            Yes                 3.0  
+1                  0.0             No                 3.0  
+2                  5.0            Yes                 1.0  
+3                  0.0             No                 1.0  
+4                  0.0            Yes                 1.0  
+
+CELL 4
+<class 'pandas.DataFrame'>
+RangeIndex: 316 entries, 0 to 315
+Data columns (total 15 columns):
+ #   Column                  Non-Null Count  Dtype  
+---  ------                  --------------  -----  
+ 0   ID                      316 non-null    int64  
+ 1   Age                     316 non-null    int64  
+ 2   Gender                  316 non-null    str    
+ 3   Bedtime                 316 non-null    str    
+ 4   Wakeup time             316 non-null    str    
+ 5   Sleep duration          316 non-null    float64
+ 6   Sleep efficiency        316 non-null    float64
+ 7   REM sleep percentage    316 non-null    int64  
+ 8   Deep sleep percentage   316 non-null    int64  
+ 9   Light sleep percentage  316 non-null    int64  
+ 10  Awakenings              302 non-null    float64
+ 11  Caffeine consumption    300 non-null    float64
+ 12  Alcohol consumption     308 non-null    float64
+ 13  Smoking status          316 non-null    str    
+ 14  Exercise frequency      310 non-null    float64
+dtypes: float64(6), int64(5), str(4)
+memory usage: 37.2 KB
+
+
+CELL 4
+               ID         Age  Sleep duration  Sleep efficiency  \
+count  316.000000  316.000000      316.000000        316.000000   
+mean   220.848101   40.025316        7.514241          0.787247   
+std    129.293645   13.389619        0.859468          0.135966   
+min      1.000000    9.000000        5.000000          0.500000   
+25%    107.500000   28.000000        7.000000          0.695000   
+50%    221.500000   40.000000        7.500000          0.820000   
+75%    332.250000   51.000000        8.000000          0.900000   
+max    452.000000   68.000000       10.000000          0.990000   
+
+       REM sleep percentage  Deep sleep percentage  Light sleep percentage  \
+count            316.000000             316.000000              316.000000   
+mean              22.512658              53.053797               24.433544   
+std                3.568357              15.728660               15.203342   
+min               15.000000              18.000000                7.000000   
+25%               20.000000              48.250000               15.000000   
+50%               22.000000              58.000000               18.000000   
+75%               25.000000              63.500000               32.500000   
+max               30.000000              75.000000               56.000000   
+
+       Awakenings  Caffeine consumption  Alcohol consumption  \
+count  302.000000            300.000000           308.000000   
+mean     1.599338             24.500000             1.159091   
+std      1.330101             32.195317             1.633530   
+min      0.000000              0.000000             0.000000   
+25%      1.000000              0.000000             0.000000   
+50%      1.000000             25.000000             0.000000   
+75%      3.000000             50.000000             2.000000   
+max      4.000000            200.000000             5.000000   
+
+       Exercise frequency  
+count          310.000000  
+mean             1.732258  
+std              1.401314  
+min              0.000000  
+25%              0.000000  
+50%              2.000000  
+75%              3.000000  
+max              5.000000  
+
+CELL 6
+<Figure size 1600x550 with 2 Axes>
+
+CELL 6
+Bedtime (Linear 12:00-12:00) vs Sleep Duration - Pearson r: 0.082 (p=1.457e-01), Spearman r: 0.072 (p=2.033e-01)
+
+
+CELL 7
+<Figure size 1100x600 with 1 Axes>
+
+CELL 7
+<Figure size 956.375x500 with 1 Axes>
+
+CELL 7
+=== Bedtime Category × Sleep Duration 交互作用迴歸報告 (HC3 Robust) ===
+                              OLS Regression Results                             
+=================================================================================
+Dep. Variable:     Q("Sleep efficiency")   R-squared:                       0.029
+Model:                               OLS   Adj. R-squared:                  0.013
+Method:                    Least Squares   F-statistic:                     1.965
+Date:                   Sat, 17 Oct 2026   Prob (F-statistic):             0.0835
+Time:                           22:29:44   Log-Likelihood:                 187.28
+No. Observations:                    316   AIC:                            -362.6
+Df Residuals:                        310   BIC:                            -340.0
+Df Model:                              5                                         
+Covariance Type:                     HC3                                         
+====================================================================================================================================
+                                                                       coef    std err          z      P>|z|      [0.025      0.975]
+------------------------------------------------------------------------------------------------------------------------------------
+Intercept                                                            0.7445      0.144      5.174      0.000       0.462       1.026
+C(Bedtime_Category)[T.Late (>00:00)]                                 0.0224      0.190      0.118      0.906      -0.350       0.394
+C(Bedtime_Category)[T.Regular (23:00-00:00)]                         0.1235      0.185      0.668      0.504      -0.239       0.486
+Q("Sleep duration")                                                  0.0095      0.019      0.494      0.622      -0.028       0.047
+Q("Sleep duration"):C(Bedtime_Category)[T.Late (>00:00)]            -0.0104      0.025     -0.410      0.682      -0.060       0.039
+Q("Sleep duration"):C(Bedtime_Category)[T.Regular (23:00-00:00)]    -0.0205      0.024     -0.840      0.401      -0.068       0.027
+==============================================================================
+Omnibus:                       28.435   Durbin-Watson:                   2.123
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):               27.123
+Skew:                          -0.654   Prob(JB):                     1.29e-06
+Kurtosis:                       2.410   Cond. No.                         278.
+==============================================================================
+
+Notes:
+[1] Standard Errors are heteroscedasticity robust (HC3)
+=== Interaction Wald Test (HC3 Robust) ===
+Wald chi-square = 0.7181
+df = 2
+p-value = 0.698341
+
+
+CELL 7
+2636
+
+CELL 9
+<Figure size 1400x500 with 2 Axes>
+
+CELL 9
+<Figure size 1500x500 with 2 Axes>
+
+CELL 11
+<Figure size 1500x500 with 2 Axes>
+
+CELL 11
+=== Pearson Correlation Matrix ===
+
+
+CELL 11
+                      Sleep efficiency  Sleep duration  Caffeine consumption
+Sleep efficiency              1.000000       -0.033621              0.091169
+Sleep duration               -0.033621        1.000000             -0.022053
+Caffeine consumption          0.091169       -0.022053              1.000000
+
+CELL 13
+<Figure size 1400x500 with 2 Axes>
+
+CELL 15
+=== 咖啡因二元分組樣本數統計 ===
+Caffeine_Binary
+With Caffeine (>0 mg)    152
+No Caffeine (0 mg)       148
+NaN                       16
+Name: count, dtype: int64
+
+=== 咖啡因二元分組 (0 vs >0) 交互作用 Wald 檢定結果 (HC3 Robust) ===
+
+
+CELL 15
+               Feature         Type    N  Wald chi2  p-value  \
+0  Alcohol consumption      numeric  292    17.9698   0.0000   
+1                  Age      numeric  300     7.4674   0.0063   
+2               Gender  categorical  300     6.6596   0.0099   
+3     Bedtime_Category  categorical  300    12.4543   0.0143   
+4       Smoking status  categorical  300     3.1213   0.0773   
+5       Sleep duration      numeric  300     1.9140   0.1665   
+6           Awakenings      numeric  286     1.0274   0.3108   
+7   Exercise frequency      numeric  294     0.1211   0.7278   
+8       Bedtime_Linear      numeric  300     0.0015   0.9694   
+
+  Significant (p<0.05)  R2 Main  R2 Interaction  Delta R2  FDR p-value  
+0              Yes (*)   0.1030          0.1519    0.0489       0.0002  
+1              Yes (*)   0.0365          0.0606    0.0241       0.0283  
+2              Yes (*)   0.0025          0.0237    0.0212       0.0296  
+3              Yes (*)   0.0337          0.0445    0.0108       0.0321  
+4                   No   0.1076          0.1194    0.0119       0.1391  
+5                   No   0.0034          0.0105    0.0071       0.2498  
+6                   No   0.3094          0.3113    0.0019       0.3996  
+7                   No   0.0795          0.0799    0.0003       0.8188  
+8                   No   0.0297          0.0297    0.0000       0.9694  
+
+CELL 16
+檢定顯著 (p-value < 0.05) 的交互作用特徵共 4 個: ['Alcohol consumption', 'Age', 'Gender', 'Bedtime_Category']
+
+=====================================================================================
+★ 顯著交互作用特徵: 【Alcohol consumption】 (numeric) | Interaction Wald p-value = 2.2444e-05
+=====================================================================================
+  - No Caffeine (0 mg)    : Slope (斜率) = -0.01163, Intercept = 0.7929, r = -0.147 (p=7.852e-02)
+  - With Caffeine (>0 mg) : Slope (斜率) = -0.05003, Intercept = 0.8430, r = -0.543 (p=1.149e-12)
+  => 兩組斜率差 (ΔSlope = With - No Caffeine): -0.03840 (斜率顯著不同，代表咖啡因改變了 Alcohol consumption 對睡眠效率的影響方向/強度！)
+
+
+CELL 16
+<Figure size 1600x550 with 2 Axes>
+
+CELL 16
+
+
+=====================================================================================
+★ 顯著交互作用特徵: 【Age】 (numeric) | Interaction Wald p-value = 6.2827e-03
+=====================================================================================
+  - No Caffeine (0 mg)    : Slope (斜率) = +0.00333, Intercept = 0.6355, r = +0.331 (p=3.923e-05)
+  - With Caffeine (>0 mg) : Slope (斜率) = +0.00012, Intercept = 0.7880, r = +0.011 (p=8.929e-01)
+  => 兩組斜率差 (ΔSlope = With - No Caffeine): -0.00321 (斜率顯著不同，代表咖啡因改變了 Age 對睡眠效率的影響方向/強度！)
+
+
+CELL 16
+<Figure size 1600x550 with 2 Axes>
+
+CELL 16
+
+
+=====================================================================================
+★ 顯著交互作用特徵: 【Gender】 (categorical) | Interaction Wald p-value = 9.8623e-03
+=====================================================================================
+
+
+CELL 16
+<Figure size 1500x550 with 2 Axes>
+
+CELL 16
+                              count    mean     std
+Gender Caffeine_Binary                             
+Female No Caffeine (0 mg)        35  0.8146  0.1428
+       With Caffeine (>0 mg)    109  0.7800  0.1374
+Male   No Caffeine (0 mg)       113  0.7676  0.1396
+       With Caffeine (>0 mg)     43  0.8237  0.1096
+
+CELL 16
+
+
+=====================================================================================
+★ 顯著交互作用特徵: 【Bedtime_Category】 (categorical) | Interaction Wald p-value = 1.4274e-02
+=====================================================================================
+
+
+CELL 16
+<Figure size 1500x550 with 2 Axes>
+
+CELL 16
+                                             count    mean     std
+Bedtime_Category      Caffeine_Binary                             
+Early (<23:00)        No Caffeine (0 mg)        66  0.8141  0.1317
+                      With Caffeine (>0 mg)     39  0.8100  0.1235
+Late (>00:00)         No Caffeine (0 mg)        44  0.7539  0.1356
+                      With Caffeine (>0 mg)     46  0.7570  0.1331
+Regular (23:00-00:00) No Caffeine (0 mg)        38  0.7461  0.1531
+                      With Caffeine (>0 mg)     67  0.8064  0.1316
+
+CELL 16
+
+
+
+
+CELL 18
+<IPython.core.display.Markdown object>

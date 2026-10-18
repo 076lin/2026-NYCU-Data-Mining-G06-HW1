@@ -1,0 +1,62 @@
+{
+  "input_file": "C:\\Users\\076\\Downloads\\Sleep_Efficiency_train_v2\\Sleep_Efficiency_train_v2.csv",
+  "input_sha256": "44902c464df701783820d063fefbee6be4fdff5d4d58fc209e2e0f467d91f453",
+  "runs": [
+    {
+      "file": "EDA.py",
+      "exit_code": 0
+    },
+    {
+      "file": "univariate_eda.py",
+      "exit_code": 0
+    },
+    {
+      "file": "interaction_tests_fixed.py",
+      "exit_code": 0
+    },
+    {
+      "file": "data_mining_hw1_caffeine_binary_interaction.ipynb",
+      "exit_code": 0
+    }
+  ],
+  "adaptations": [
+    "All analyses use the supplied local CSV.",
+    "Notebook package installation and Kaggle download replaced by local setup.",
+    "Random seeds set to 42; notebook plots and statistical tables exported.",
+    "Notebook silent model exceptions changed to explicit failures.",
+    "Original static conclusions replaced by computed results.",
+    "HTML exporter uses the project-local nbconvert template directory."
+  ],
+  "input_rows": 316,
+  "input_columns": 15,
+  "input_missing_counts": {
+    "ID": 0,
+    "Age": 0,
+    "Gender": 0,
+    "Bedtime": 0,
+    "Wakeup time": 0,
+    "Sleep duration": 0,
+    "Sleep efficiency": 0,
+    "REM sleep percentage": 0,
+    "Deep sleep percentage": 0,
+    "Light sleep percentage": 0,
+    "Awakenings": 14,
+    "Caffeine consumption": 16,
+    "Alcohol consumption": 8,
+    "Smoking status": 0,
+    "Exercise frequency": 6
+  },
+  "package_versions": {
+    "pandas": "3.0.6",
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "seaborn": "0.13.2",
+    "statsmodels": "0.15.0",
+    "nbclient": "0.11.0",
+    "nbconvert": "7.17.2",
+    "ipykernel": "7.4.0"
+  },
+  "png_count": 38,
+  "csv_count": 18
+}

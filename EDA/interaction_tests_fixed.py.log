@@ -1,0 +1,92 @@
+Exploratory HC3-robust OLS interaction tests
+Wald p-values test interaction coefficients jointly equal zero.
+BH-FDR q-values adjust across ALL tests in this report.
+Each test uses its own complete-case dataset; varying N is expected.
+Caffeine binary means >0 mg vs 0 mg; it does not imply coffee drinking.
+Bedtime bins: early 18-23, regular 23-24, late 00-06, daytime 06-18.
+Observational associations are not causal conclusions.
+
+Input rows: 316
+
+                                    Test   N  Joint_Wald_chi2  Wald_df  Interaction_p    BH_FDR_q
+       Alcohol x caffeine (binary >0 mg) 292          17.9698        1     2.2444e-05 0.000134664
+      Alcohol x caffeine (continuous mg) 292          15.8393        1    6.89547e-05 0.000275819
+           Alcohol x caffeine (3 levels) 292           24.446        2     4.9161e-06 5.89933e-05
+     Sleep duration x bedtime (4 groups) 316          2.61052        3       0.271102    0.414356
+                 Age x caffeine (binary) 300          7.46739        1     0.00628267    0.018848
+               Age x caffeine (3 levels) 300          7.37085        2      0.0250866   0.0602078
+      Sleep duration x caffeine (binary) 300          1.91397        1       0.166523    0.333046
+    Sleep duration x caffeine (3 levels) 300          2.34728        2       0.309239    0.414356
+          Awakenings x caffeine (binary) 286          1.02741        1       0.310767    0.414356
+        Awakenings x caffeine (3 levels) 286          1.75539        2       0.415741    0.498889
+  Exercise frequency x caffeine (binary) 294         0.121103        1       0.727841    0.770474
+Exercise frequency x caffeine (3 levels) 294         0.521499        2       0.770474    0.770474
+
+Group counts:
+                                    Test                 Group   N
+       Alcohol x caffeine (binary >0 mg)                   0.0 145
+       Alcohol x caffeine (binary >0 mg)                   1.0 147
+           Alcohol x caffeine (3 levels)                  None 145
+           Alcohol x caffeine (3 levels)         Low (0-50 mg] 127
+           Alcohol x caffeine (3 levels)         High (>50 mg)  20
+     Sleep duration x bedtime (4 groups)   Early (18:00-22:59) 107
+     Sleep duration x bedtime (4 groups) Regular (23:00-23:59)  36
+     Sleep duration x bedtime (4 groups)    Late (00:00-05:59) 173
+                 Age x caffeine (binary)                   0.0 148
+                 Age x caffeine (binary)                   1.0 152
+               Age x caffeine (3 levels)                  None 148
+               Age x caffeine (3 levels)         Low (0-50 mg] 131
+               Age x caffeine (3 levels)         High (>50 mg)  21
+      Sleep duration x caffeine (binary)                   0.0 148
+      Sleep duration x caffeine (binary)                   1.0 152
+    Sleep duration x caffeine (3 levels)                  None 148
+    Sleep duration x caffeine (3 levels)         Low (0-50 mg] 131
+    Sleep duration x caffeine (3 levels)         High (>50 mg)  21
+          Awakenings x caffeine (binary)                   0.0 144
+          Awakenings x caffeine (binary)                   1.0 142
+        Awakenings x caffeine (3 levels)                  None 144
+        Awakenings x caffeine (3 levels)         Low (0-50 mg] 123
+        Awakenings x caffeine (3 levels)         High (>50 mg)  19
+  Exercise frequency x caffeine (binary)                   0.0 146
+  Exercise frequency x caffeine (binary)                   1.0 148
+Exercise frequency x caffeine (3 levels)                  None 146
+Exercise frequency x caffeine (3 levels)         Low (0-50 mg] 129
+Exercise frequency x caffeine (3 levels)         High (>50 mg)  19
+
+Group-specific slopes and HC3 95% CIs:
+                                    Test                 Group       Slope      CI_low    CI_high     Slope_p
+       Alcohol x caffeine (binary >0 mg)                   0.0  -0.0116308  -0.0246544 0.00139271   0.0800547
+       Alcohol x caffeine (binary >0 mg)                   1.0  -0.0500279  -0.0620927  -0.037963 4.39482e-16
+           Alcohol x caffeine (3 levels)                  None  -0.0116308  -0.0246544 0.00139271   0.0800547
+           Alcohol x caffeine (3 levels)         Low (0-50 mg]  -0.0466145  -0.0591345 -0.0340944  2.9358e-13
+           Alcohol x caffeine (3 levels)         High (>50 mg)   -0.143226   -0.212794 -0.0736579 5.45656e-05
+     Sleep duration x bedtime (4 groups)    Late (00:00-05:59) -0.00142866  -0.0253192  0.0224619    0.906697
+     Sleep duration x bedtime (4 groups)   Early (18:00-22:59)  0.00949351  -0.0282034  0.0471904    0.621593
+     Sleep duration x bedtime (4 groups) Regular (23:00-23:59)  -0.0370476  -0.0819451 0.00784991    0.105817
+                 Age x caffeine (binary)                   0.0   0.0033275   0.0017677  0.0048873 2.90036e-05
+                 Age x caffeine (binary)                   1.0 0.000116019 -0.00157887 0.00181091    0.893273
+               Age x caffeine (3 levels)                  None   0.0033275   0.0017677  0.0048873 2.90036e-05
+               Age x caffeine (3 levels)         Low (0-50 mg] 8.44714e-05 -0.00172128 0.00189023    0.926948
+               Age x caffeine (3 levels)         High (>50 mg) 0.000866933 -0.00297219 0.00470606    0.658063
+      Sleep duration x caffeine (binary)                   0.0  -0.0198191  -0.0472811 0.00764294    0.157219
+      Sleep duration x caffeine (binary)                   1.0  0.00673656  -0.0189777  0.0324509    0.607625
+    Sleep duration x caffeine (3 levels)                  None  -0.0198191  -0.0472811 0.00764294    0.157219
+    Sleep duration x caffeine (3 levels)         Low (0-50 mg]   0.0106926  -0.0170485  0.0384337    0.449977
+    Sleep duration x caffeine (3 levels)         High (>50 mg) -0.00431655  -0.0505836  0.0419505     0.85491
+          Awakenings x caffeine (binary)                   0.0  -0.0526884  -0.0657589 -0.0396179 2.77108e-15
+          Awakenings x caffeine (binary)                   1.0  -0.0616554  -0.0730485 -0.0502624 2.77412e-26
+        Awakenings x caffeine (3 levels)                  None  -0.0526884  -0.0657589 -0.0396179 2.77108e-15
+        Awakenings x caffeine (3 levels)         Low (0-50 mg]  -0.0628124  -0.0753193 -0.0503054 7.32448e-23
+        Awakenings x caffeine (3 levels)         High (>50 mg)   -0.046902  -0.0746671  -0.019137 0.000930095
+  Exercise frequency x caffeine (binary)                   0.0   0.0262929   0.0120201  0.0405658 0.000305523
+  Exercise frequency x caffeine (binary)                   1.0   0.0299075   0.0153912  0.0444237 5.38934e-05
+Exercise frequency x caffeine (3 levels)                  None   0.0262929   0.0120201  0.0405658 0.000305523
+Exercise frequency x caffeine (3 levels)         Low (0-50 mg]   0.0281396   0.0131156  0.0431636 0.000241637
+Exercise frequency x caffeine (3 levels)         High (>50 mg)  0.00222892  -0.0667595  0.0712173    0.949509
+
+Saved files to: D:\HelloWorld\DM_HW1\EDA_rerun_train_v2\interaction_results_fixed
+
+interaction_tests_fixed.py:29: SingularMatrixWarning: The design matrix is rank-deficient. The model parameters are not uniquely determined.
+  fit = smf.ols(formula, data=df).fit(cov_type='HC3')
+interaction_tests_fixed.py:37: ValueWarning: covariance of constraints does not have full rank. The number of constraints is 3, but rank is 2
+  test = fit.wald_test(R, scalar=True)

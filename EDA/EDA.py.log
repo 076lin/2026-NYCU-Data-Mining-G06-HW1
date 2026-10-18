@@ -1,0 +1,45 @@
+==================================================
+  Sleep Efficiency - Time Features EDA Report
+==================================================
+
+總資料筆數: 316
+
+=== 1. Bedtime 與 Wakeup time 時間先後統計 ===
+1. Bedtime 早於 Wakeup time 筆數: 173
+2. Bedtime 與 Wakeup time 完全相同筆數: 0
+3. Bedtime 晚於 Wakeup time 筆數 (跨夜未+1天Bug): 143
+   -> 跨夜未+1天筆數佔總資料比例: 45.25%
+
+=== 2. Sleep duration 關係式驗證 ===
+Sleep duration == (Wakeup time - Bedtime) 符合筆數: 316 / 316
+符合率: 100.00%
+
+【重要結論】原始欄位 Sleep duration 實質為「躺在床上的總時間 (Time in Bed)」，
+且 100% 由 Wakeup time - Bedtime 算得。
+
+=== 3. 分別繪製並儲存 5 張 EDA 圖表... ===
+已順利輸出以下 5 張獨立圖表：
+  1. time_fig1_duration_match.png (算得時數 vs 原始欄位吻合圖)
+  2. time_fig2_bedtime_hour.png (上床小時數分佈圖)
+  3. time_fig3_duration_dist.png (睡眠時數分佈圖)
+  4. time_fig4_bedtime_vs_efficiency.png (上床小時 vs 睡眠效率箱形圖)
+  5. time_fig5_duration_vs_efficiency.png (睡眠時數 vs 睡眠效率箱形圖)
+
+Console Log 已成功儲存至: time_eda_console_output.txt
+==================================================
+
+EDA.py:127: FutureWarning: 
+
+Passing `palette` without assigning `hue` is deprecated and will be removed in v0.14.0. Assign the `x` variable to `hue` and set `legend=False` for the same effect.
+
+  sns.countplot(x=bed_hours, palette='Blues_d')
+EDA.py:152: FutureWarning: 
+
+Passing `palette` without assigning `hue` is deprecated and will be removed in v0.14.0. Assign the `x` variable to `hue` and set `legend=False` for the same effect.
+
+  sns.boxplot(x=bed_hours, y=df['Sleep efficiency'], palette='Blues_d')
+EDA.py:163: FutureWarning: 
+
+Passing `palette` without assigning `hue` is deprecated and will be removed in v0.14.0. Assign the `x` variable to `hue` and set `legend=False` for the same effect.
+
+  sns.boxplot(

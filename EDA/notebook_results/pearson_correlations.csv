@@ -1,0 +1,4 @@
+,Sleep efficiency,Sleep duration,Caffeine consumption
+Sleep efficiency,1.0,-0.033621281821462866,0.091168569539216
+Sleep duration,-0.033621281821462866,1.0,-0.022052868408881137
+Caffeine consumption,0.091168569539216,-0.022052868408881137,1.0

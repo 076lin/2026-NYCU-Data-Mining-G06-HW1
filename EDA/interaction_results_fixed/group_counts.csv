@@ -1,0 +1,29 @@
+﻿Test,Group,N
+Alcohol x caffeine (binary >0 mg),0.0,145
+Alcohol x caffeine (binary >0 mg),1.0,147
+Alcohol x caffeine (3 levels),None,145
+Alcohol x caffeine (3 levels),Low (0-50 mg],127
+Alcohol x caffeine (3 levels),High (>50 mg),20
+Sleep duration x bedtime (4 groups),Early (18:00-22:59),107
+Sleep duration x bedtime (4 groups),Regular (23:00-23:59),36
+Sleep duration x bedtime (4 groups),Late (00:00-05:59),173
+Age x caffeine (binary),0.0,148
+Age x caffeine (binary),1.0,152
+Age x caffeine (3 levels),None,148
+Age x caffeine (3 levels),Low (0-50 mg],131
+Age x caffeine (3 levels),High (>50 mg),21
+Sleep duration x caffeine (binary),0.0,148
+Sleep duration x caffeine (binary),1.0,152
+Sleep duration x caffeine (3 levels),None,148
+Sleep duration x caffeine (3 levels),Low (0-50 mg],131
+Sleep duration x caffeine (3 levels),High (>50 mg),21
+Awakenings x caffeine (binary),0.0,144
+Awakenings x caffeine (binary),1.0,142
+Awakenings x caffeine (3 levels),None,144
+Awakenings x caffeine (3 levels),Low (0-50 mg],123
+Awakenings x caffeine (3 levels),High (>50 mg),19
+Exercise frequency x caffeine (binary),0.0,146
+Exercise frequency x caffeine (binary),1.0,148
+Exercise frequency x caffeine (3 levels),None,146
+Exercise frequency x caffeine (3 levels),Low (0-50 mg],129
+Exercise frequency x caffeine (3 levels),High (>50 mg),19

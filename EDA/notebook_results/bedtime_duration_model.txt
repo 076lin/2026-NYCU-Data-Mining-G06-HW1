@@ -1,0 +1,29 @@
+                              OLS Regression Results                             
+=================================================================================
+Dep. Variable:     Q("Sleep efficiency")   R-squared:                       0.029
+Model:                               OLS   Adj. R-squared:                  0.013
+Method:                    Least Squares   F-statistic:                     1.965
+Date:                   Sat, 17 Oct 2026   Prob (F-statistic):             0.0835
+Time:                           22:29:44   Log-Likelihood:                 187.28
+No. Observations:                    316   AIC:                            -362.6
+Df Residuals:                        310   BIC:                            -340.0
+Df Model:                              5                                         
+Covariance Type:                     HC3                                         
+====================================================================================================================================
+                                                                       coef    std err          z      P>|z|      [0.025      0.975]
+------------------------------------------------------------------------------------------------------------------------------------
+Intercept                                                            0.7445      0.144      5.174      0.000       0.462       1.026
+C(Bedtime_Category)[T.Late (>00:00)]                                 0.0224      0.190      0.118      0.906      -0.350       0.394
+C(Bedtime_Category)[T.Regular (23:00-00:00)]                         0.1235      0.185      0.668      0.504      -0.239       0.486
+Q("Sleep duration")                                                  0.0095      0.019      0.494      0.622      -0.028       0.047
+Q("Sleep duration"):C(Bedtime_Category)[T.Late (>00:00)]            -0.0104      0.025     -0.410      0.682      -0.060       0.039
+Q("Sleep duration"):C(Bedtime_Category)[T.Regular (23:00-00:00)]    -0.0205      0.024     -0.840      0.401      -0.068       0.027
+==============================================================================
+Omnibus:                       28.435   Durbin-Watson:                   2.123
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):               27.123
+Skew:                          -0.654   Prob(JB):                     1.29e-06
+Kurtosis:                       2.410   Cond. No.                         278.
+==============================================================================
+
+Notes:
+[1] Standard Errors are heteroscedasticity robust (HC3)
