@@ -1,4 +1,4 @@
-# 2026 NYCU Data Mining — Group 06 / HW1
+# 2026 National Yang Ming Chiao Tung University Data Mining — Group 06 / HW1
 
 以睡眠與生活習慣資料進行探索性資料分析（EDA）、交互作用檢定，以及睡眠效率（`Sleep efficiency`）的迴歸預測。本專案包含分析程式、Jupyter Notebook、CSV 資料與已產出的 EDA 圖表及報告。
 
