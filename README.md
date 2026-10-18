@@ -4,6 +4,19 @@
 
 本專案使用 Kaggle 上由 **Equilibriumm** 發布的 [Sleep Efficiency Dataset](https://www.kaggle.com/datasets/equilibriumm/sleep-efficiency)。**資料集的官方授權欄位標示為「Data files © Original Authors」；隨附資料的權利與散布限制請見 [DATA_LICENSE.md](DATA_LICENSE.md)。**
 
+## 組員與工作分配
+
+| 姓名 | 學號 | 工作分配 |
+|---|---|---|
+| 王裕昕 | 315554006 | EDA、基準模型（baselines）、特徵工程 |
+| 林李奕 | 315553025 | EDA、特徵工程 |
+| 林群佑 | 315554038 | EDA、第 2 節撰寫、投影片 |
+| 林庠安 | 315551119 | EDA、特徵工程、報告撰寫 |
+| 林景玄 | 315551127 | EDA、特徵工程、投影片 |
+| 顏丞硯 | 315554021 | EDA、Sleep duration 分析、報告與投影片撰寫 |
+| 林程亮 | 112550125 | EDA、報告的相關研究（related work） |
+| 郭佳翰 | 315551137 | 基準模型（baselines）、特徵工程 |
+
 ## 專案內容
 
 ```text
@@ -46,7 +59,7 @@
 | 睡眠階段比例 | `REM sleep percentage`、`Deep sleep percentage`、`Light sleep percentage` |
 | 生活習慣 | `Caffeine consumption`、`Alcohol consumption`、`Smoking status`、`Exercise frequency` |
 
-`Linear Regression/Sleep_Efficiency.csv` 含 452 筆資料；`EDA/Sleep_Efficiency_train_v2.csv` 含其中 316 筆。經本次逐列比對，訓練檔的 316 筆均可依 `ID` 對應到完整檔，且全部欄位值相同。
+`Linear Regression/Sleep_Efficiency.csv` 含 452 筆資料；`EDA/Sleep_Efficiency_train_v2.csv` 含其中 316 筆。訓練檔的 316 筆均可依 `ID` 對應到完整檔，且全部欄位值相同。
 
 | 缺失欄位 | 完整資料（452 筆） | EDA 訓練資料（316 筆） |
 |---|---:|---:|
