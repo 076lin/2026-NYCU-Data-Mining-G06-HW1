@@ -5,7 +5,7 @@
 | 項目 | 說明 |
 |---|---|
 | 資料集名稱 | Sleep Efficiency Dataset |
-| Kaggle 發布者 | Equilibriumm（發布者身分不等同已確認的原始著作權人） |
+| Kaggle 發布者 | Equilibriumm |
 | 資料集頁面 | https://www.kaggle.com/datasets/equilibriumm/sleep-efficiency |
 | 發布者頁面 | https://www.kaggle.com/equilibriumm |
 | 原始資料檔名 | `Sleep_Efficiency.csv` |
@@ -21,16 +21,6 @@
 | `Linear Regression/Sleep_Efficiency.csv` | 本專案使用的完整資料副本：452 筆、15 欄。未於本次文件整理中修改；未另行下載並驗證與 Kaggle 當前版本逐位元相同。 |
 | `EDA/Sleep_Efficiency_train_v2.csv` | 從完整資料衍生的訓練子集：316 筆、15 欄。經逐列核對，所有資料均可依 ID 對應至上述完整檔，且全部欄位值相同。 |
 
-本機檔案的 SHA-256（用於辨識本包版本）：
-
-```text
-Linear Regression/Sleep_Efficiency.csv
-1e2a1c44f992c49b18b31fc53e268601f1a8c940a270282e0e11d7739cc92793
-
-EDA/Sleep_Efficiency_train_v2.csv
-44902c464df701783820d063fefbee6be4fdff5d4d58fc209e2e0f467d91f453
-```
-
 分析程式會在記憶體中進行時間轉換、分組、缺失值處理與特徵工程，並產生圖表及統計摘要。訓練子集的製作或這些分析處理不代表本組取得了原始資料的著作權，也不構成新的第三方資料授權。
 
 ## 權利與使用限制
@@ -45,7 +35,7 @@ EDA/Sleep_Efficiency_train_v2.csv
 
 ## 建議引用
 
-以下格式用於標明本專案實際取得資料的來源，不將 Kaggle 發布者推定為原始研究作者：
+以下格式用於標明本專案實際取得資料的來源：
 
 ```text
 Equilibriumm (Kaggle publisher). Sleep Efficiency Dataset [Data set]. Kaggle.
@@ -54,4 +44,3 @@ Accessed 2026-10-18.
 License field: Data files © Original Authors.
 ```
 
-若後續取得原權利人的授權文件，應保存該文件並更新本說明。

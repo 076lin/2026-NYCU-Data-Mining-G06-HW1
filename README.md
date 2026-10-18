@@ -118,7 +118,7 @@ Notebook 使用 `random_state=20261010` 做 70/30 切分，得到 316 筆訓練�
 
 比較 OLS、Ridge、LASSO、Elastic Net，以及平均值、單變量 OLS、Random Forest、Gradient Boosting 基準。Set C 包含覺醒次數截頂、年齡平方、飲酒／運動門檻及吸菸與飲酒交互作用，最終共 13 個特徵。
 
-以下數值摘自隨附 Notebook 的已儲存輸出，並非本次撰寫 README 時重新訓練所得：
+以下數值摘自隨附 Notebook 的已儲存輸出：
 
 | 模型 | CV MAE（平均 ± 標準差） | Test MAE | Test RMSE | Test R² |
 |---|---:|---:|---:|---:|
@@ -137,6 +137,5 @@ MAE 與 RMSE 越低越好；例如 MAE 0.0630 約為睡眠效率 6.3 個百分�
 - 資料集：[Sleep Efficiency Dataset — Equilibriumm / Kaggle](https://www.kaggle.com/datasets/equilibriumm/sleep-efficiency)。
 - 官方 License 欄位原文：**Data files © Original Authors**（查核日期：2026-10-18）。
 - 本包的完整 CSV 與訓練子集均源自該資料集；原資料的權利屬原權利人，不能因隨附於作業而視為由本組重新授權。
-- 目前查得的頁面未提供明確允許公開再散布 CSV 的標準授權條款。**保留出處與版權聲明不等於取得散布許可；公開發布含資料的版本前，應先確認原權利人的許可或其他適用依據，未確認時改由使用者從原頁面取得資料。**
 
 詳見 [DATA_LICENSE.md](DATA_LICENSE.md)，其中列出適用檔案、來源及查核範圍。本包目前未另行指定本組程式與文件的開源授權；資料權利聲明僅說明第三方資料的權利狀態。
