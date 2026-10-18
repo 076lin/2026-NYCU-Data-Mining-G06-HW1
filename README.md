@@ -82,7 +82,7 @@ python -m venv .venv
 .\.venv\Scripts\python.exe -m pip install -r "EDA/requirements.txt" -r "Linear Regression/requirements.txt"
 ```
 
-`EDA/requirements.txt` 固定了原執行環境的版本，模型目錄則使用套件版本下限；安裝時需要套件來源提供相應版本。兩份 Notebook 均讀取隨附的本機 CSV，不需要 Kaggle API 金鑰。
+`EDA/requirements.txt` 固定了原執行環境的版本，模型目錄則使用套件版本下限；安裝時需要套件來源提供相應版本。兩份 Notebook 均讀取隨附的 CSV，不需要 Kaggle API 金鑰。
 
 ### 2. 重跑 EDA
 
