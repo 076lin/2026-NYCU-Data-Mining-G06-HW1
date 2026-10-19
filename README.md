@@ -1,6 +1,6 @@
 # 2026 National Yang Ming Chiao Tung University Data Mining — Group 06 / HW1
 
-以睡眠與生活習慣資料進行探索性資料分析（EDA）、交互作用檢定，以及睡眠效率（`Sleep efficiency`）的迴歸預測。本專案包含分析程式、Jupyter Notebook、CSV 資料與已產出的 EDA 圖表及報告。
+以睡眠與生活習慣資料進行探索性資料分析（EDA）、交互作用檢定，以及睡眠效率（`Sleep efficiency`）的迴歸預測。本專案包含分析程式、Jupyter Notebook、CSV 資料、EDA 圖表與報告，以及作業報告與簡報 PDF。
 
 本專案使用 Kaggle 上由 **Equilibriumm** 發布的 [Sleep Efficiency Dataset](https://www.kaggle.com/datasets/equilibriumm/sleep-efficiency)。**資料集的官方授權欄位標示為「Data files © Original Authors」；隨附資料的權利與散布限制請見 [DATA_LICENSE.md](DATA_LICENSE.md)。**
 
@@ -8,14 +8,18 @@
 
 | 姓名 | 學號 | 工作分配 |
 |---|---|---|
-| 王裕昕 | 315554006 | EDA、基準模型（baselines）、特徵工程 |
-| 林李奕 | 315553025 | EDA、特徵工程 |
-| 林群佑 | 315554038 | EDA、第 2 節撰寫、投影片 |
-| 林庠安 | 315551119 | EDA、特徵工程、報告撰寫 |
-| 林景玄 | 315551127 | EDA、特徵工程、投影片 |
-| 顏丞硯 | 315554021 | EDA、Sleep duration 分析、報告與投影片撰寫 |
-| 林程亮 | 112550125 | EDA、報告的相關研究（related work） |
-| 郭佳翰 | 315551137 | 基準模型（baselines）、特徵工程 |
+| 林程亮 | 112550125 | EDA (Alcohol, Gender); slides and writing for Related Work. |
+| 林庠安 | 315551119 | EDA (Smoking); feature engineering; writing for Method through Conclusion. |
+| 林景玄 | 315551127 | EDA (Awakenings); feature engineering; slides for Method through Conclusion. |
+| 郭佳翰 | 315551137 | Baselines; feature engineering. |
+| 林李奕 | 315553025 | EDA (Age, Exercise Frequency); feature engineering. |
+| 王裕昕 | 315554006 | EDA (Overall); baselines; feature engineering; final model. |
+| 顏丞硯 | 315554021 | EDA (Bedtime, Wakeup time, Sleep duration); slides and writing for EDA. |
+| 林群佑 | 315554038 | EDA (Caffeine); slides and writing for Introduction, Task Definition, and EDA; editorial and analytical revision of the report. |
+
+## AI 使用說明
+
+We used GPT-6.1 Luna for EDA and baseline modeling; Claude Opus 5.5 for coding, debugging, leakage checks, and writing assistance; GPT-6 for literature search; Gemini 3.6 Flash for plots and wording; Deepseek V4.1 Flash for report review; and Gemini 4 Argon for report review. All experimental decisions, results, and conclusions were verified by the team.
 
 ## 專案內容
 
@@ -23,6 +27,8 @@
 2026-NYCU-Data-Mining-G06-HW1/
 ├── README.md
 ├── DATA_LICENSE.md                      # 第三方資料來源、權利聲明與使用限制
+├── HW1_G06_report.pdf                   # 作業報告
+├── HW1_G06_presentation.pdf             # 簡報（PDF）
 ├── EDA/
 │   ├── README.md                        # EDA 重跑紀錄與詳細說明
 │   ├── requirements.txt                 # EDA 環境的套件版本紀錄
@@ -46,7 +52,9 @@
     └── Sleep_Efficiency_v2.ipynb          # 前處理、特徵工程、調參與評估
 ```
 
-只想查看已有結果時，可先開啟 [EDA 報告](EDA/EDA_report.html)，或在 Jupyter 中查看兩份 Notebook 的既有輸出。`Linear Regression/eda_plots/` 與 `Linear Regression/results/` 會在重新執行模型 Notebook 時產生，目前這包未附這兩個目錄。
+作業文件可直接開啟：[作業報告（PDF）](HW1_G06_report.pdf)、[簡報（PDF）](HW1_G06_presentation.pdf)。
+
+若要查看分析細節，可開啟 [EDA 報告](EDA/EDA_report.html)，或在 Jupyter 中查看兩份 Notebook 的既有輸出。`Linear Regression/eda_plots/` 與 `Linear Regression/results/` 會在重新執行模型 Notebook 時產生，目前這包未附這兩個目錄。
 
 ## 資料與分析目標
 
